@@ -1,0 +1,55 @@
+<%= form_for(brand) do |f| %>
+ <div class="row">
+  <h1>New Brand</h1>
+  
+    <div class="col-lg-6 col-lg-offset-3">
+        <% if brand.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(brand.errors.count, "error") %> prohibited this brand from being saved:</h2>
+
+      <ul>
+      <% brand.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+        <div class="form-group">
+    
+      <%= f.label "Photo url" %>
+      <%= f.text_field :image_url, class: 'form-control' %>
+ 
+
+    
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control' %>
+ 
+
+   
+      <%= f.label :description %>
+      <%= f.text_area :description, class: 'form-control', size: '4x5' %>
+
+
+
+      <%= f.label :price %>
+      <%= f.number_field :price, class: 'form-control' %>
+
+
+
+      <%= f.label :category %>
+      <%= f.text_field :category, class: 'form-control' %>
+
+
+   
+      <%= f.label :subcategory %>
+      <%= f.text_field :subcategory, class: 'form-control' %>
+      <br>
+    
+      <%= f.submit 'Add Brand', class: 'btn btn-success' %>
+   
+  </div>
+    </div>
+    <% end %>
+  </div>
+
+

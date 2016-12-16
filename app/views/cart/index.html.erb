@@ -1,0 +1,28 @@
+<% if @carts.empty? %>
+<p>Your cart is currently empty.</p>
+<%else%>
+<%= link_to 'Empty Your Cart', clear_path %>
+<%end%>
+
+<br><br><br>
+<% sum_total = 0 %>
+<ul>
+    
+  		<% @carts.each do | id, quantity| %> 
+  			<% brand = Brand.find_by_id(id) %>
+  			<li>
+  				<%= link_to brand.title, brand %>
+  				<p><%= brand.description%></p>
+  				<p><%= number_to_currency(brand.price, unit: 'XAF ')%></p>
+  				<p>Quantity: <%= quantity %></p>
+  				<p>total : <%= number_to_currency(brand.price * quantity, unit: 'XAF ') %></p>
+
+
+  			</li>
+  			<% sum_total += quantity * brand.price %>
+  		<%end%>
+
+</ul>
+<% if !@carts.empty? %>
+<p>Amount payable: <strong><%= number_to_currency(sum_total, unit: 'XAF ')  %></strong></p>
+<%end%>

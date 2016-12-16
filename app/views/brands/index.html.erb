@@ -1,0 +1,52 @@
+<h1>SHOP</h1>
+<div class="row" style="margin-bottom: 0px">
+    <div class="col-md-12">
+        <ul class="nav navbar-nav navbar-left">
+      
+                            <li><a href="#">Auto Carousel</a></li>
+                            <li><a href="#">Carousel</a></li>
+                            <li><a href="#">Carousel</a></li>
+                            <li><a href="#">Left & Right</a></li>
+                            <li><a href="#">Four Columns</a></li>
+                            <li><a href="#">Four Columns Grid</a></li>
+                            <li><a href="#">Four Columns Grid</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Glyphicon</a></li>
+        </ul>
+    </div>
+
+</div>
+<hr style="margin-top: 0">
+<div class="row">
+
+    <% @brands.each do |brand| %>
+
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <a href="/brands/<%=brand.id%>">
+                <figure class="cap-bot item">
+                    <%= image_tag(brand.image_url, class: 'brand-image') %>
+                    <figcaption>
+                        Description: <%= brand.description %>
+                    </figcaption> 
+                </figure>
+                </a>
+                <div class="caption">
+                    <h3 style="text-decoration: underline; color: #337AB7;"><%= brand.title %></h3>
+                        
+                       
+                    
+                    <p>Price: <%= number_to_currency(brand.price, unit: 'XAF ') %></p>
+                    <p>Category: <%= brand.category %></p>
+                    <p>Subcategory: <%= brand.subcategory %></p>
+                    <a href="/cart/add/<%= brand.id %>" class="btn btn-success" role="button">Add To Cart</a>
+                    
+                </div>
+        </div>
+    </div>
+    <% end %>
+</div>
+
+
+
+

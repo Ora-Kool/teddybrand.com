@@ -1,0 +1,106 @@
+<% content_for(:home_page, 'home')%>
+ <div class="row" style="margin: 10px">
+  <div class="col-sm-8">
+	  <h4>FEATURED</h4>
+	  <hr>
+	  <% for i in 0..2 %>
+		  	<div class="col-sm-4">
+		  					<div style="padding: 1rem; border: 1px solid #eeeeee">
+		                      <%= image_tag('logo.png', style: "width: 100%; height: 300px") %> 
+		            		</div>
+		                
+		                    <h3 style="text-decoration: underline; color: #337AB7;">Teddy W</h3>
+		                        
+		                       
+		                    <p>Description:</p>
+		                    <p>Price:</p>
+		                    
+		                    
+		    </div>
+		    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hrspacing"><hr class="hrcolor"></div>
+		  	<div class="col-sm-4">
+		  						<div style="padding: 1rem; border: 1px solid #eeeeee">
+		                      		<%= image_tag('teddy.png', style: "width: 100%; height: 300px") %> 
+		            			</div>
+		                
+		                    <h3 style="text-decoration: underline; color: #337AB7;">Teddy W</h3>
+		                        
+		                       
+		                    <p>Description:</p>
+		                    <p>Price:</p>
+		                   
+		  	</div>
+		  	<div class="col-xs-12 col-sm-12 hidden-md hidden-lg hrspacing"><hr class="hrcolor"></div>
+		  	<div class="col-sm-4">
+		  						<div style="padding: 1rem; border: 1px solid #eeeeee">
+		                      		<%= image_tag('logo.png', style: "width: 100%; height: 300px") %> 
+		                      	</div>
+		            
+		                
+		                    <h3 style="text-decoration: underline; color: #337AB7;">Teddy</h3>
+		                        
+		                       
+		                    <p>Description:</p>
+		                    <p>Price:</p>
+		                   
+		  	</div>
+		  	<%end%>
+
+  </div>
+ 
+  <div class="col-sm-4">
+  	<h4>BEST SELLERS</h4>
+  	<hr>
+  	<div class="row" style="overflow: auto; height: 30em">
+  	<% for i in 0..4 %>
+	  		<div class="col-sm-12 col-xs-12" style="margin-bottom: 10px">
+		       <div class="col-sm-6">
+		       		<%= image_tag('teddy.png', style: "width: 100%; height: 200px") %>
+		       </div>
+	          	<div class="col-sm-6 col-xs-6">
+	          		<div style="margin-top: 5rem">
+	          			<h4>Teddy Figure</h4>
+	          			<h6>20% / 200</h6>
+	          		</div>
+	          		
+	          	</div>
+	       </div>
+	       <div class="col-sm-12 col-xs-12" style="margin-bottom: 10px">
+		       <div class="col-sm-6">
+		       		<%= image_tag('teddy.png', style: "width: 100%; height: 200px") %>
+		       </div>
+	          	<div class="col-sm-6 col-xs-6">
+	          		<div style="margin-top: 5rem">
+	          			<h4>Teddy Figure</h4>
+	          			<h6>20% / 200</h6>
+	          		</div>
+	          		
+	          	</div>
+	       </div>
+	       <div class="col-sm-12 col-xs-12" style="margin-bottom: 10px">
+		       <div class="col-sm-6">
+		       		<%= image_tag('teddy.png', style: "width: 100%; height: 200px") %>
+		       </div>
+	          	<div class="col-sm-6 col-xs-6">
+	          		<div style="margin-top: 5rem">
+	          			<h4>Teddy Figure</h4>
+	          			<h6>20% / 200</h6>
+	          		</div>
+	          		
+	          	</div>
+	       </div>
+      <%end%>
+  	</div>
+      
+
+        
+
+        <!-- hr for only x-small/small viewports -->
+        <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hrspacing"><hr class="hrcolor"></div>
+
+        
+
+        <!-- hr for for all viewports -->
+
+  </div>
+</div>
